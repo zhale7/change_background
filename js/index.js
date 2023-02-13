@@ -5,10 +5,10 @@ const colors = ['red', 'green', 'aqua', 'yellow', 'black', 'peachpuff', 'yellowg
 // Initially, set background color to violet, when you open browser the background will be shown violet.
 body.style.backgroundColor = 'violet';
 // Function is created to generate random colors.
-const changeBackground = () => {
-  const colorIndex = Math.floor(Math.random() * colors.length);
+const changeBackground = (colorsArray) => {
+  const colorIndex = Math.floor(Math.random() * colorsArray.length);
   // console.log(colorIndex);
-  body.style.backgroundColor = colors[colorIndex];
+  body.style.backgroundColor = colorsArray[colorIndex];
 }
 // Background will change every time when you click button.
 button.addEventListener("click", changeBackground);
